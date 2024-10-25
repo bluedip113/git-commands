@@ -1,6 +1,5 @@
 # git-commands
 
-If a Python project doesn’t have a `requirements.txt` file to list its dependencies, you can use one of these methods to generate it:
 
 ### 1. **Use `pipreqs` to create a `requirements.txt`**
 
@@ -16,34 +15,21 @@ If a Python project doesn’t have a `requirements.txt` file to list its depende
      pipreqs /path/to/your/project
      ```
 
-   - This will generate a `requirements.txt` file with the detected dependencies.
-
-### 2. **Use `pip freeze` to create a `requirements.txt`**
-
-   If you’re running the code in a virtual environment and have already installed the dependencies, you can use `pip freeze` to list the current environment’s packages:
+### 2. **Set Up a Virtual Environment**
+   Create a virtual environment to isolate the project dependencies.
 
    ```bash
-   pip freeze > requirements.txt
+   python -m venv env
    ```
 
-   This will output all the installed packages in the virtual environment to `requirements.txt`. You can then manually remove any packages that are not part of the project.
-
-### 3. **Use `pip-chill` to get only the top-level dependencies**
-
-   `pip-chill` lists only the packages you installed directly and not their dependencies.
-
-   - Install `pip-chill`:
+   Then, activate the virtual environment:
+   - On **Windows**:
      ```bash
-     pip install pip-chill
+     .\env\Scripts\activate
      ```
 
-   - Run `pip-chill` to output the top-level dependencies:
-     ```bash
-     pip-chill > requirements.txt
-     ```
+- To install dependencies from a `requirements.txt` file, use the following command:
 
-### 4. **Manual Review and Dependency Inspection**
-
-   Go through the imports in your project files manually and add any missing dependencies by installing them and noting the versions (if needed). This can help avoid any unnecessary dependencies in `requirements.txt`. 
-
-These approaches should help you generate a `requirements.txt` file even when one is missing.
+```bash
+pip install -r requirements.txt
+```
