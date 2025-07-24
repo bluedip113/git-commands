@@ -15,6 +15,17 @@
      pipreqs /path/to/your/project
      ```
 
+     
+---
+
+## 📦 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+
+
 ### 2. **Set Up a Virtual Environment**
    Create a virtual environment to isolate the project dependencies.
 
