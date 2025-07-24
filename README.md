@@ -28,8 +28,50 @@
      .\env\Scripts\activate
      ```
 
-- To install dependencies from a `requirements.txt` file, use the following command:
+
+---
+
+## ⚙️ 4. Run Migrations (to set up the database)
 
 ```bash
-pip install -r requirements.txt
+python manage.py migrate
 ```
+
+---
+
+## 👤 5. (Optional) Create Admin User
+
+```bash
+python manage.py createsuperuser
+```
+
+Follow the prompts to set up a login for the admin dashboard.
+
+---
+
+## 🚀 6. Run the Development Server
+
+```bash
+python manage.py runserver
+```
+
+You’ll see something like:
+
+```
+Starting development server at http://127.0.0.1:8000/
+```
+
+Open your browser and go to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## 📁 Optional Notes
+
+* The project uses **SQLite** as its default DB (`db.sqlite3`).
+* To upload or use media (like profile pictures), make sure the `media/` and `static/` directories are correctly served (already present here).
+* Admin panel: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+---
+
+Let me know if you want to **deploy it**, or connect to **PostgreSQL**, or add features!
+
